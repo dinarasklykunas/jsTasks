@@ -1,19 +1,12 @@
 let myFunction = () => {}
 
-let report = {
-    totalCalls: 0,
-    getReport: function() {
-        return {
-            totalCalls: this.totalCalls
-        }
-    }
-}
+let totalCalls = 0
 
 let spy = fn => {
     return count => {
         for(let i = 0; i < count; i++) {
             fn()
-            report.totalCalls++
+            totalCalls++
         }
     }
 }
@@ -22,4 +15,4 @@ let spy = fn => {
 let spied = spy(myFunction)
 spied(2)
 
-console.log(report.getReport())
+console.log(totalCalls)
