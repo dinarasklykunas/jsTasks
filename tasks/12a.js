@@ -30,14 +30,13 @@ Calculator.prototype = {
         if (!isNaN(value))
             this.value /= value
         return this
+    },
+    toString: function() {
+        return this.value
     }
-}
-
-Calculator.prototype.toString = function() {
-    return this.value
 }
 
 var calc = new Calculator(0)
 var amount = calc.add(5).multiply(2).add(20).divide(3)
 
-console.log(amount)
+console.log(amount.toString())
