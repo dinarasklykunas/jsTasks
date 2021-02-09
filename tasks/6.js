@@ -1,8 +1,9 @@
 function removeDuplicates(arr) {
     if (!Array.isArray(arr))
         return 'Parameter must be an array'
+        
     return arr.reduce((newArr, elem) => {
-        if (newArr.indexOf(elem) < 0)
+        if (!newArr.includes(elem))
             newArr.push(elem)
         return newArr
     }, [])

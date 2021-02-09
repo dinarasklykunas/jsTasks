@@ -10,7 +10,7 @@ let previousColor = null
 
 for (let i = 1; i <= 7; i++) {
     previousColor = getRandomColor()
-    console.log(previousColor("#".repeat(i)))
+    console.log(previousColor('#'.repeat(i)))
 }
 
 function getRandomColor() {

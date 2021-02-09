@@ -1,6 +1,6 @@
 const sum = (numbers) => {
-    if (!Array.isArray(numbers) || !numbers.every(elem => typeof elem === "number"))
-        return "Argument must be an array of numbers"
+    if (!Array.isArray(numbers) || !numbers.every(elem => typeof elem === 'number'))
+        return 'Argument must be an array of numbers'
     return numbers.reduce((total, current) => total + current)
 }
 

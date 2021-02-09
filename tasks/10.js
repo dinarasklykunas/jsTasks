@@ -1,18 +1,24 @@
-let myFunction = () => {}
-
-let totalCalls = 0
-
-let spy = fn => {
-    return count => {
-        for(let i = 0; i < count; i++) {
-            fn()
-            totalCalls++
-        }
-    }
+let myFunction = (arg) => {
+    console.log(`myFunction argument: ${arg}`)
 }
 
+let spy = fn => {
+    totalCalls = 0
+
+    let wrapped = (arg) => {
+        fn(arg)
+        totalCalls++
+    }
+
+    wrapped.report = () => {
+        return { totalCalls: totalCalls }
+    }
+    
+    return wrapped
+}
 
 let spied = spy(myFunction)
-spied(2)
+spied(1)
+spied('argument')
 
-console.log(totalCalls)
+console.log(spied.report())

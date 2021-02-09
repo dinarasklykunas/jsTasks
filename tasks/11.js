@@ -1,6 +1,8 @@
 function sum(arr) {
     if (!Array.isArray(arr)) return 'Parameter must be an array'
-    return arr.reduce((total, curr) => Array.isArray(curr) ? total + sum(curr) : isNaN(total + parseFloat(curr)) ? 0 : total + parseFloat(curr), 0)
+    return arr.reduce((total, curr) => Array.isArray(curr) ? 
+        total + sum(curr) : isNaN(total + parseFloat(curr)) ?
+            0 : total + parseFloat(curr), 0)
 }
 
 console.log(sum([10, 6, [4, 8], 3, [6, 5, [9]]]))

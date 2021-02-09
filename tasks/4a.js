@@ -1,8 +1,8 @@
 function sum(numbers) {
     var sum = 0
 
-    if (!Array.isArray(numbers) || !numbers.every(elem => typeof elem === "number"))
-        return "Argument must be an array of numbers"
+    if (!Array.isArray(numbers) || !numbers.every(elem => typeof elem === 'number'))
+        return 'Argument must be an array of numbers'
 
     for (var i = 0; i < numbers.length; i++)
         sum += numbers[i]

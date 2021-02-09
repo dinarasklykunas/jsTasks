@@ -1,25 +1,37 @@
 class Calculator {
     constructor(value) {
-        this.value = value
+        value = parseFloat(value)
+        if (!isNaN(value))
+            this.value = value
+        else
+            this.value = 0
     }
 
     add(number) {
-        this.value += number
+        value = parseFloat(value)
+        if (!isNaN(value))
+            this.value += value
         return this
     }
 
     subtract(number) {
-        this.value -= number
+        value = parseFloat(value)
+        if (!isNaN(value))
+            this.value -= value
         return this
     }
 
     multiply(number) {
-        this.value *= number
+        value = parseFloat(value)
+        if (!isNaN(value))
+            this.value *= value
         return this
     }
 
     divide(number) {
-        this.value /= number
+        value = parseFloat(value)
+        if (!isNaN(value))
+            this.value /= value
         return this
     }
 }
